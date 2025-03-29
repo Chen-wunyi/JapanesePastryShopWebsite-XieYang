@@ -1,0 +1,111 @@
+#account,
+#password,
+h3,
+#nickName,
+#comfirm_password,
+#account2,
+#password2, 
+#email, 
+#phone {
+  width: 200px;
+  height: 20px;
+  margin: 10px;
+  color: rgba(138, 77, 50, 0.4);
+}
+
+
+#container1{
+  padding: 20px 50px;
+  width: fit-content;
+  /* height: 300px; */
+  background-color: white;
+  border-radius: 5px;
+  border-top: 10px solid rgba(138, 77, 50, 0.4);
+  box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+
+  /*定位對齊*/
+  position: relative;
+  margin: auto;
+  top: 250px;
+}
+
+#container2 {
+  padding: 20px 50px;
+  width: fit-content;
+  /* height: 300px; */
+  background-color: white;
+  border-radius: 5px;
+  border-top: 10px solid rgba(138, 77, 50, 0.4);
+  box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+
+  /*定位對齊*/
+  position: relative;
+  margin: auto;
+  top: 200px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn_goSign {
+  cursor: pointer;
+  margin: 20px;
+  color: #a3a2a3;
+}
+.btn_goSign:hover {
+  color: black;
+}
+
+.text {
+  font-size: 24px;
+}
+
+.submit {
+  color: white;
+  background: rgba(138, 77, 50, 0.4);
+  width: 200px;
+  /* height: 30px; */
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.submit:hover {
+  background: rgba(138, 77, 50, 0.4);
+}
+
+#container2 {
+  visibility: hidden;
+  /*剛開始消失*/
+  /* height: 350px; */
+}
+
+
+#copyright {
+  position: fixed;
+  bottom: 10px;
+  left: 50px;
+  color: #a3a2a3;
+  margin: -200px 0px 0px 0px;
+  font-size: 14px;
+}
+
+input {
+  padding: 20px 10px;
+  font-size: 48px;
+  border: none;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+}
+
+.message.show{
+  margin: 2px;
+  margin-left: 10px;
+  font-size: 16px;
+}

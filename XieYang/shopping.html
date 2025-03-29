@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/input.css"><!-- radio change -->
+  <link rel="stylesheet" type="text/css" href="css/card.css">
+  <link rel="stylesheet" type="text/css" href="css/shopping.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <script src="js/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="js/radioChange.js"></script>
+  <!-- <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/shopping.js"></script>
+  <script type="text/javascript" src="js/logInCheck.js"></script>
+  <title>產品一覽-斜陽館</title>
+</head>
+
+
+<body>
+  <nav id="bar">
+    <div id="topbarLeft">
+      <a class="logo" href="index.html">斜陽館<label style="font-size: 0.7vw;margin-left: 1vw;"></label></a>
+    </div>
+    <div class="topBarRight">
+      <ul id="linkBar">
+        <li><a class="part" href="product.html">產品一覽</a></li>
+        <li><a class="part" href="shopping.html">線上選購</a></li>
+        <li><a class="part" href="shopSearch.html">門市查詢</a></li>
+        <li><a class="part" href="franchise.html">加盟專區</a></li>
+        <div class="dropdown">
+          <a id="member" class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            會員專區
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item part" href="member.html">會員資料</a></li>
+            <li><a class="dropdown-item part" href="order.html">訂單紀錄</a></li>
+          </ul>
+        </div>
+        <li><a id="logIn" class="part" href="logIn.html">登入</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="radioChange">
+    <div id="radio">
+      <label><input type="radio" name="pattern" value="tea" checked="checked" onclick="tea(event)"><span
+          class="round button">茶</span></label>
+      <label><input type="radio" name="pattern" value="pastry" onclick="pastry(event)"><span
+          class="round button">糕點</span></label>
+    </div>
+    <div class="shoppingCart">
+      <button type="button" class="popup-button" onclick="showPopup()">
+        <img class="shoppingCart" src="img/icon/shoppingCart.png" alt="購物車">
+      </button>
+      <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <p>購物車</p><br />
+        <table id="table">
+          <thead>
+            <tr>
+              <th>品項</th>
+              <th>數量</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <label for="datetime-input">選擇來店日期跟時間：</label>
+        <input type="datetime-local" id="datetime-input" name="datetime-input">
+        <button id="button" onclick="enter();">送出訂單</button>
+      </div>
+    </div>
+    <div class="c-sec">
+      <section class="change l-tea">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/tea/抹茶.jpg" alt="抹茶">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">抹茶</h3>
+                    <button id="Btn0" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/tea/焙茶.jpg" alt="焙茶">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">焙茶</h3>
+                    <button id="Btn1" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/tea/煎茶.jpg" alt="煎茶">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">煎茶</h3>
+                    <button id="Btn2" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/tea/玄米茶.jpg" alt="玄米茶">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">玄米茶</h3>
+                    <button id="Btn3" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/tea/玉露.jpg" alt="玉露">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">玉露</h3>
+                    <button id="Btn4" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <section class="change l-pastry" style="display: none;">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/和三盆糖打果子.jpg" alt="和三盆糖打菓子">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">和三盆糖打菓子</h3>
+                    <button id="Btn5" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/大福.jpg" alt="大福">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">大福</h3>
+                    <button id="Btn6" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/最中.jpg" alt="最中">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">最中</h3>
+                    <button id="Btn7" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/栗蒸羊羹.jpg" alt="栗蒸羊羹">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">栗蒸羊羹</h3>
+                    <button id="Btn8" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/海綿蛋糕.jpg" alt="海綿蛋糕">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">海綿蛋糕</h3>
+                    <button id="Btn9" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/煉切.jpg" alt="煉切">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">煉切</h3>
+                    <button id="Btn10" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/糰子.jpg" alt="糰子">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">糰子</h3>
+                    <button id="Btn11" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/葛櫻.jpg" alt="葛櫻">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">葛櫻</h3>
+                    <button id="Btn12" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/銅鑼燒.jpg" alt="銅鑼燒">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">銅鑼燒</h3>
+                    <button id="Btn13" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="c-card">
+                <div class="c-card__img-mask">
+                  <img class="js-lazy" src="img/product/pastry/香魚燒.jpg" alt="香魚燒">
+                </div>
+                <div class="c-card__body">
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">香魚燒</h3>
+                    <button id="Btn14" class="Btn">加入購物車</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+  <div class="footer">
+    <div class="l-footer__img-mask">
+      <img src="img/bg/product_bg_1.jpg" alt="背景">
+    </div>
+  </div>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      breakpoints: {
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+      speed: 2000,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+</body>
+
+</html>

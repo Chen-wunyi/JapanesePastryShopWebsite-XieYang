@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/member.css">
+  <link rel="stylesheet" type="text/css" href="css/input.css">
+  <link rel="stylesheet" type="text/css" href="css/card.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  <!-- <script type="text/javascript" src="js/jquery-3.6.4.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/logInCheck.js"></script>
+  <script type="text/javascript" src="js/radioChange.js"></script>
+  <title>訂單紀錄-斜陽館</title>
+</head>
+
+
+<body>
+  <nav id="bar">
+    <div id="topbarLeft">
+      <a class="logo" href="index.html">斜陽館<label style="font-size: 0.7vw;margin-left: 1vw;"></label></a>
+    </div>
+    <div class="topBarRight">
+      <ul id="linkBar">
+        <li><a class="part" href="product.html">產品一覽</a></li>
+        <li><a class="part" href="shopping.html">線上選購</a></li>
+        <li><a class="part" href="shopSearch.html">門市查詢</a></li>
+        <li><a class="part" href="franchise.html">加盟專區</a></li>
+        <div class="dropdown">
+          <a id="member" class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            會員專區
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item part" href="member.html">會員資料</a></li>
+            <li><a class="dropdown-item part" href="order.html">訂單紀錄</a></li>
+          </ul>
+        </div>
+        <li><a id="logIn" class="part" href="logIn.html">登入</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="radio">
+    <label><input type="radio" name="pattern" value="hasAlreadyPaid" checked="checked"
+        onclick="hasAlreadyPaid(event)"><span class="round button">已付款</span></label>
+    <label><input type="radio" name="pattern" value="notYet" onclick="notYet(event)"><span
+        class="round button">未付款</span></label>
+  </div>
+  <div class="c-sec">
+    <section class="change l-hasAlreadyPaid">
+      <table id="table-hasAlreadyPaid">
+        <thead>
+          <tr>
+            <th>來店時間</th>
+            <th>商品</th>
+            <th>桌號</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <section class="change l-notYet" style="display: none;">
+      <table id="table-notYet">
+        <thead>
+          <tr>
+            <th>來店時間</th>
+            <th>商品</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+  <!-- <div class="wrapper">
+    <div class="c-member">
+      <div class="photo_wrapper">
+        <div class="photo">
+          <img src="img/bg/member_photo.jpg" alt="頭貼">
+        </div>
+        <div class="name">簡侑參</div>
+        <div class="card-name__wrapper">
+          <iframe src="img/icon/crown-solid.svg"></iframe>
+          <div class="card-name">斜陽卡</div>
+        </div>
+        <progress value="10" max="100"></progress>
+        <p>10/100</p>
+        <div class="discount">
+          <div class="front">
+            <iframe src="img/icon/coins-solid.svg"></iframe>
+            <div class="text">折扣點數</div>
+          </div>
+          <div class="back text">1點</div>
+        </div>
+        <div class="discount">
+          <div class="front">
+            <iframe src="img/icon/ticket-simple-solid.svg"></iframe>
+            <div class="text">我的券匣</div>
+          </div>
+          <div class="back">
+            <div class="back text">1張</div>
+          </div>
+        </div>
+        <div class="barcode">
+          <img src="img/icon/1234567890ABC.png" alt="條碼">
+        </div>
+      </div>
+
+
+    </div>
+
+  </div> -->
+
+</body>
+
+</html>
